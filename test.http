@@ -1,0 +1,73 @@
+@postid = 67cdd7ae03881095c5230676
+@answerid = 67ce2998e8e4d37ddaa15875
+@username = ethan
+@apiroot = http://localhost:8000/asq/api
+
+###
+POST {{apiroot}}/questions
+Content-Type: application/json
+
+{
+    "title": "a test",
+    "contents": "some content",
+    "author": "an author"
+}
+
+
+###
+POST {{apiroot}}/likes/{{postid}}/{{username}}
+Content-Type: application/json
+
+###
+GET {{apiroot}}/likes/{{postid}}
+Content-Type: application/json
+
+###
+GET {{apiroot}}/likes/{{postid}}/{{username}}
+Content-Type: application/json
+
+###
+DELETE {{apiroot}}/likes/{{postid}}/{{username}}
+Content-Type: application/json
+
+###
+GET {{apiroot}}/questions
+Content-Type: application/json
+
+###
+GET {{apiroot}}/questions/{{postid}}
+Content-Type: application/json
+
+###
+PUT {{apiroot}}/questions/{{postid}}
+Content-Type: application/json
+
+{
+    "title": "Update worked",
+    "contents": "Update doubly worked"
+}
+
+###
+GET {{apiroot}}/questions/{{postid}}/answers
+Content-Type: application/json
+
+###
+POST {{apiroot}}/questions/{{postid}}/answers
+Content-Type: application/json
+
+{
+    "contents": "An answer",
+    "author": "a nice guy"
+}
+
+###
+GET {{apiroot}}/answers/{{answerid}}
+Content-Type: application/json
+
+###
+PUT {{apiroot}}/answers/{{answerid}}
+Content-Type: application/json
+
+{
+    "contents": "Updated successfully"
+}
