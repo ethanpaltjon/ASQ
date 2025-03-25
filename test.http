@@ -1,73 +1,196 @@
-@postid = 67cdd7ae03881095c5230676
-@answerid = 67ce2998e8e4d37ddaa15875
-@username = ethan
-@apiroot = http://localhost:8000/asq/api
+# @postid = 67d8af72572872062cb78d8d
+# @answerid = 67d8cb2111f02b9fd86ffb18
+# @username = ethan
+# @apiroot = http://localhost:8000/asq/api
 
-###
-POST {{apiroot}}/questions
-Content-Type: application/json
+# ### Create a question
+# POST {{apiroot}}/questions
+# Content-Type: application/json
 
-{
-    "title": "a test",
-    "contents": "some content",
-    "author": "an author"
-}
+# {
+#     "contents": "somecontents",
+#     "author": "Etha"
+# }
+
+# ### Update a question
+# PUT {{apiroot}}/questions/{{postid}}
+# Content-Type: application/json
+
+# {
+#     "title": "assssssshjsadas",
+#     "contents": "whydoihavetodothis"
+# }
+
+# ### Create an answer
+# POST {{apiroot}}/questions/{{postid}}/answers
+# Content-Type: application/json
+
+# {
+#     "contents": "an answer",
+#     "author": "alsoethan"
+# }
+
+# ### Create a like
+# POST {{apiroot}}/likes/{{postid}}/{{username}}
+# Content-Type: application/json
+
+# ### Create a like on a post that doesn't exist
+# POST {{apiroot}}/likes/hgfqwhipfwq/{{username}}
+# Content-Type: application/json
+
+# ### Gets all questions
+# GET {{apiroot}}/questions
+# Content-Type: application/json
+
+# ### Gets all answers
+# GET {{apiroot}}/questions/{{postid}}/answers
+# Content-Type: application/json
+
+# ### Makes an answer
+# POST {{apiroot}}/questions/{{postid}}/answers
+# Content-Type: application/json
+
+# {
+#     "author": "Etgan",
+#     "contents": "ohfiiufhiu"
+# }
+
+# ### Updates an answer
+# PUT {{apiroot}}/answers/{{answerid}}
+# Content-Type: application/json
+
+# {
+#     "contents": "kjhkjhdfskj"
+# }
+
+# ### Get all likes for a post
+# GET {{apiroot}}/likes/{{postid}}
+# Content-Type: application/json
+
+# ### Makes a like
+# POST {{apiroot}}/likes/{{postid}}/{{username}}
+# Content-Type: application/json
+
+# ### Deletes a like
+# DELETE {{apiroot}}/likes/{{postid}}/{{username}}
+# Content-Type: application/json
+
+# ### Liking unknown post
+# POST {{apiroot}}/likes/67d8b8a2b4af7b4c749d52df/{{username}}
+# Content-Type: application/json
+
+# ###
+# GET {{apiroot}}/questions/67d8b8a2b4af7b4c749d52df
+# Content-Type: application/json
+
+# ###
+# POST {{apiroot}}/questions
+# Content-Type: application/json
+
+# {
+#     "title": "jajsdklajkd jasadsa",
+#     "contents": "some contents"
+#     ouaoifuiow
+# }
+
+# ###
+# POST {{apiroot}}/questions
+# Content-Type: application/json
+
+# {
+#     "title": "jajsdklajkd jasadsa",
+#     "contents": "some contents",
+#     "author": "anauthor"
+# }
 
 
-###
-POST {{apiroot}}/likes/{{postid}}/{{username}}
-Content-Type: application/json
+# ###
+# POST {{apiroot}}/likes/{{postid}}/{{username}}
+# Content-Type: application/json
 
-###
-GET {{apiroot}}/likes/{{postid}}
-Content-Type: application/json
+# ###
+# GET {{apiroot}}/likes/{{postid}}
+# Content-Type: application/json
 
-###
-GET {{apiroot}}/likes/{{postid}}/{{username}}
-Content-Type: application/json
+# ###
+# GET {{apiroot}}/likes/{{postid}}/{{username}}
+# Content-Type: application/json
 
-###
-DELETE {{apiroot}}/likes/{{postid}}/{{username}}
-Content-Type: application/json
+# ###
+# DELETE {{apiroot}}/likes/{{postid}}/{{username}}
+# Content-Type: application/json
 
-###
-GET {{apiroot}}/questions
-Content-Type: application/json
+# ###
+# GET {{apiroot}}/questions
+# Content-Type: application/json
 
-###
-GET {{apiroot}}/questions/{{postid}}
-Content-Type: application/json
+# ###
+# GET {{apiroot}}/questions/{{postid}}
+# Content-Type: application/json
 
-###
-PUT {{apiroot}}/questions/{{postid}}
-Content-Type: application/json
+# ###
+# PUT {{apiroot}}/questions/{{postid}}
+# Content-Type: application/json
 
-{
-    "title": "Update worked",
-    "contents": "Update doubly worked"
-}
+# {
+#     "title": "Update worked",
+#     "contents": "Update doubly worked"
+# }
 
-###
-GET {{apiroot}}/questions/{{postid}}/answers
-Content-Type: application/json
+# ###
+# GET {{apiroot}}/questions/{{postid}}/answers
+# Content-Type: application/json
 
-###
-POST {{apiroot}}/questions/{{postid}}/answers
-Content-Type: application/json
+# ###
+# POST {{apiroot}}/questions/{{postid}}/answers
+# Content-Type: application/json
 
-{
-    "contents": "An answer",
-    "author": "a nice guy"
-}
+# {
+#     "contents": "An answer",
+#     "author": "guvi"
+# }
 
-###
-GET {{apiroot}}/answers/{{answerid}}
-Content-Type: application/json
+# ###
+# GET {{apiroot}}/answers/{{answerid}}
+# Content-Type: application/json
 
-###
-PUT {{apiroot}}/answers/{{answerid}}
-Content-Type: application/json
+# ###
+# PUT {{apiroot}}/answers/{{answerid}}
+# Content-Type: application/json
 
-{
-    "contents": "Updated successfully"
-}
+# {
+#     "contents": "Updated successfully"
+# }
+
+# ###
+# POST {{apiroot}}/likes/{{postid}}
+# Content-Type: application/json
+
+# ### NOT FOUND
+# POST {{apiroot}}/sdfdsfererers
+# Content-Type: application/json
+
+# ### NOT FOUND 2
+# GET {{apiroot}}/1234567890abcdef12345678
+# Content-Type: application/json
+
+# ### Invalid params
+# GET {{apiroot}}/questions/iuibiuib
+# Content-Type: application/json
+
+# ### Invalid JSON
+# PUT {{apiroot}}/answers/{{answerid}}
+# Content-Type: application/json
+
+# {
+#     "test": trueeeee
+# }
+
+# ### Missing title
+# POST {{apiroot}}/questions
+# Content-Type: application/json
+
+# {
+#     "contents": "iuhfewiuhfeiuhewifufew",
+#     "author": "iufuihfiuhewqiu"
+# }

@@ -1,0 +1,10 @@
+@postid = 67d8af72572872062cb78d8d
+@answerid = 67d8cb2111f02b9fd86ffb18
+@username = ethan
+@apiroot = http://localhost:8000/asq/api
+
+GET {{apiroot}}/questions/67d8b8a2b4af7b4c749d52df
+Content-Type: application/json
+
+
+GET {{apiroot}}/likes/{{postid}}/{{username}}
